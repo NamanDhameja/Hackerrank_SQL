@@ -1,0 +1,75 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.1.49-community MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2010, Oracle and/or its affiliates. All rights reserved.
+This software comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to modify and redistribute it under the GPL v2 license
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database practice;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use practice;
+Database changed
+mysql> create table Employee(
+    -> eid int,
+    -> name varchar(30),
+    -> months int,
+    -> sal float(4));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc Employee
+    -> ;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| eid    | int(11)     | YES  |     | NULL    |       |
+| name   | varchar(30) | YES  |     | NULL    |       |
+| months | int(11)     | YES  |     | NULL    |       |
+| sal    | float       | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+mysql> insert into Employee values(12228,"Rose",15,1968);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Employee;
++-------+------+--------+------+
+| eid   | name | months | sal  |
++-------+------+--------+------+
+| 12228 | Rose |     15 | 1968 |
++-------+------+--------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into Employee values(33645,"Angela",1,3443);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(45692,"Frank",17,1608);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(56118,"Patrick",7,1345);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(59725,"Lisa",11,2330);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Employee values(74197,"Kimberly",16,4372);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(78454,"Bonnie",8,1771);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(83565,"Michael",6,2017);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(98607,"Todd",5,3396);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(99989,"Joe",9,3573);
+Query OK, 1 row affected (0.01 sec)
+
+mysql>
